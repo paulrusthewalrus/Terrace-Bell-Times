@@ -1,0 +1,137 @@
+body {
+	font-family: Trebuchet MS;
+	margin: 50px;
+	background-color: #F2C12E;
+}
+
+input {
+	font-size: 28px;
+}
+
+#output { /* TEXT OF BELL OUTPUT */
+	color: black;
+	opacity: 0.8;
+	/*-moz-text-stroke-color: black;
+  -webkit-text-stroke-color: black;
+     -moz-text-stroke-width: 0.8px;  
+  -webkit-text-stroke-width: 0.8px;
+  paint-order: stroke fill;*/	
+}
+
+#minutes {
+	font-size: 30px;
+}
+
+#and {
+	font-size: 20px;
+}
+
+#seconds {
+	font-size: 30px;
+}
+
+#email { /* a span element for emails */
+	color: purple;
+	font-weight: 600;
+}
+
+#heading { /* TITLE OF THE GUI (Terrace Bell Times) */
+	position: fixed;
+	font-size: 30px;
+	left: 85px;
+	top: 40px;
+}
+
+#headhr {
+	position: fixed;
+	height: 1px;
+	background-color: black;
+	border-color: black;
+	top: 105px;
+	left: 170px;
+	width: 90px;
+	transition: 0.3s;
+}
+
+#help { /* HELP BUTTON */
+	position: fixed;
+	width: 40px;
+	left: 10px;
+	top: 10px;
+}
+
+.helpbox { /* HIDDEN HELP BOX */
+	position: fixed;
+	left: 38px;
+	top: 140px;
+	height: 400px;
+	width: 340px;
+	text-align: justify-all;
+	border: 2px solid black;
+	padding: 15px;
+	background-color: white;
+	display: none;
+}
+
+.options { /* TABLE FOR BELL TIME INPUTS */
+	border: 2px solid black;
+	position: fixed;
+	padding: 10px;
+	background-color: white;
+	left: 130px;
+	top: 150px;
+}
+
+.adjust {
+	visibility: hidden
+}
+
+.adjust table {
+	border: 2px solid black;
+	padding: 10px;
+	background-color: white;
+	position: fixed;
+	top: 450px;
+	left: 100px;
+}
+
+.adjust table input {
+	width: 45px;
+	font-size: 20px;
+}
+
+.colours { /* TABLE FOR THE COLOUR INPUT (boolean) */
+	position: fixed;
+	padding: 10px;
+	border: 2px solid black;
+	text-align: center;
+	background-color: white;
+	width: 145px;
+	height: 80px;
+	top: 300px;
+	left: 130px;
+}
+
+.bell { /* DIV CONTAINER FOR BELL OUTPUT */
+	background-color: white;
+	width: 300px;
+	padding: 5px;
+	text-align: center;
+	border: 2px solid black;
+	position: absolute;
+	left: 600px;
+	top: 150px;
+}
+
+
+.gui { /* GREEN BACKGROUND */
+	position: fixed;
+	z-index: -1;
+	width: 450px;
+	height: 800px;
+	left: 0px;
+	top: 0px;
+	background-color: #14A697;
+	opacity: 0.5;
+	border-right: 10px solid silver;
+}

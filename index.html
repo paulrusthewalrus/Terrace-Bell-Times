@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="copyright" content="Paul Clarke" />
+
+	<title id="title">Terrace Bell Times</title>
+	<link href="main.css" rel="stylesheet" type="text/css"/>
+	<link rel="shortcut icon" type="image/png" href="clock.png"/>
+
+	<script
+		  src="https://code.jquery.com/jquery-3.3.1.js"
+		  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		  crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+	<script language="JavaScript" type="text/javascript" src="query.js"></script>
+
+	<meta name="name" content="Terrace Bell Times">
+	<meta name="description" content="for determining time between adjacent bells during school hours">
+	<meta name="author" content="Paul Clarke">
+	<meta name="version" content="2.0">
+</head>
+<body onload="init();">
+
+	<div class="gui"></div>
+
+	<p id="heading">Terrace Bell Times</p>
+	<hr id="headhr">
+
+	<img src="questionmark.png" id="help">
+
+	<div class="helpbox">
+		<p>To start, select the current bell time. This defaults
+		to the normal bell time for your day. The time remaining before the next bell will
+		be shown on the right side panel and in the tab of this site.</p>
+
+		<p><b>Bell time colour</b> gives a colour representation of the time remaining. More specifically,
+		green stands for a significant portion of time left, yellow stands for an average amount of time
+		left, and finally red standing for little time left.</p>
+
+		<p>This website can be left open to view the bell time at any point (from tab or the site itself)</p>
+
+		<p>If you notice any bugs, please email <span id="email">s9140961@terrace.qld.edu.au</span> with any information that can assist me with fixing the error in question.</p>
+	</div>
+
+	<form name="main">
+			<table class="options">
+				<tr>
+					<td><input name="bell" type="radio" value="long" id="long" onclick="bellUpdate(1)"></td>
+					<td><label for="long">Long Bells</label><br></td>
+				</tr>
+
+				<tr>
+					<td><input name="bell" type="radio" value="short" id="short" onclick="bellUpdate(2)"></td>
+					<td><label for="short">Short Bells</label><br></td>
+				</tr>
+
+				<tr>
+					<td><input name="bell" type="radio" value="thursday" id="thursday" onclick="bellUpdate(4)"></td>
+					<td><label for="thursday">Thursday Bells</label></td>
+				</tr>
+			</table>
+	</form> 
+
+	<form name="colours">
+		<div class="colours">
+			<label for="colours">Bell Time Colour:</label> 
+			<table>
+				<tr><td></td></tr>
+				<tr>
+					<td><input name="colour" type="radio" value="yes" id="yes" onclick="colourUpdate(true)"></td>
+					<td><label for="yes">Yes</label></td>
+				</tr>
+				<tr>
+					<td><input name="colour" type="radio" value="no" id="no" onclick="colourUpdate(false)"></td>
+					<td><label for="no">No</label></td>
+				</tr>
+			</table>	
+		</div>
+	</form>
+
+	<form name="adjust">
+		<div class="adjust">
+			<table>
+				<tr>
+					<td><label for="adjust">Adjusting Seconds:</label></td>
+					<td><input name="adjust" type="number" value="0" id="adjust" onchange="adjUpdate(this.value);" max="59" min="-59"></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+
+	<br>
+
+	<div class="bell">
+		<p id="output">{Bell Time}</p>
+	</div>
+</body>
+</html>
